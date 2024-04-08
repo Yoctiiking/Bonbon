@@ -1,0 +1,13 @@
+.bonbonBg{
+    background-color: rgb(199, 0, 93);
+}
+
+.bordure{
+    border: solid 3px black;
+    border-right: double;
+}
+
+.img-bd{
+    height: 200px; 
+    width: 250px;
+}
