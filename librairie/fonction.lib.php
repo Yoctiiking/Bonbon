@@ -1,9 +1,5 @@
 <?php
-/*
-Nom: Kadja Jean-Faabien Yoctan YEDE
-DA: 202210233
-But: Fonction de la librairie qui affiche les différents objets de la table produit sur notre page produit.
-*/
+
 function ConnecterBD(&$bd)
 {
     $bd = mysqli_connect("localhost", "root", "infoWin420", "bonbon");
@@ -49,7 +45,7 @@ function VerifierUsager($bd, $courriel, $mdp)
     }
 }
 
-function AjouterProduit($bd, $nomProduit,$fournisseur, $quantite, $format, $prixProduit, $description)
+function AjouterProduit($bd, $nomProduit, $fournisseur, $quantite, $format, $prixProduit, $description)
 {
     $nomProduit = ucfirst($nomProduit);
     $fournisseur = ucfirst($fournisseur);
@@ -60,4 +56,21 @@ function AjouterProduit($bd, $nomProduit,$fournisseur, $quantite, $format, $prix
     move_uploaded_file($fichier, "images/$number.jpg");
 }
 
+function SupprimerProduit($bd)
+{
+    $requete = "select * from produit";
+    $resultat = mysqli_query($bd, $requete);
+    while ($ligne = mysqli_fetch_array($resultat)) {
+        $cocher = 'chk' . $ligne['idProduit'];
+        if (isset($_POST[$cocher])) {
+            if ($_POST[$cocher]) {
+                $requete2 = "delete from produit where idProduit = $ligne[idProduit]";
+                $resultat2 = mysqli_query($bd, $requete2);
+                unlink("images/$ligne[idProduit].jpg");
+            }
+        }
+    }
+}
+
 ?>
+
