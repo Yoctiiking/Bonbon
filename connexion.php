@@ -20,7 +20,7 @@ if(isset($_GET["action"])){
     </div>
     <div class="row">
         <div class="col-5 text-end">Mot de passe :</div>
-        <div class="col-7"><input type="password" name="mdp" id="mdp"></div>
+        <div class="col-7"><input type="password" name="mdp" id="mdp" required></div>
     </div>
     <div class="row align-center mt-2">
         <div class="col-6 text-end">

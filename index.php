@@ -1,9 +1,17 @@
         <?php session_start();
-        if(isset($_SESSION['courriel'])){
+          if(isset($_SESSION['courriel'])){
           require('./inclus/entete2.inc');
         } else {
           require('./inclus/entete.inc');
-        } ?>
+        } 
+        if(isset($_GET["action"])){
+            if($_GET["action"] == "deconnecter"){
+              session_unset();  
+              session_destroy();
+              header("Location: index.php");
+            }
+          }
+        ?>
 
 
           <p>
@@ -17,4 +25,8 @@
           <p class="text-center">Bon magasinage !</p>
 
 
-        <?php require('./inclus/piedPage.inc'); ?>
+        <?php if(isset($_SESSION['courriel'])){
+          require('./inclus/piedPage2.inc');
+        } else {
+          require('./inclus/piedPage.inc');
+        }?>
