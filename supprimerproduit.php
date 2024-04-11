@@ -1,9 +1,12 @@
 <?php session_start();
-if ($_SESSION["acces"] != "Oui") {
+if(isset($_SESSION["acces"])){
+    if ($_SESSION["acces"] != "Oui") {
+        header("Location: index.php");
+    }
+}else{
     header("Location: index.php");
 }
-require ('./inclus/entete2.inc');
-require ('./librairie/fonction.lib.php');
+require ('librairie/fonction.lib.php');
 
 $bd;
 ConnecterBD($bd);
@@ -14,6 +17,7 @@ if (isset($_GET["action"])) {
     }
 }
 
+require ('inclus/entete2.inc');
 ?>
 <h2 class="text-center">Supprimer un produit</h2>
 

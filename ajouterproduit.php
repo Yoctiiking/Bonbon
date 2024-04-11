@@ -1,5 +1,9 @@
 <?php session_start();
-if ($_SESSION["acces"] != "Oui") {
+if(isset($_SESSION["acces"])){
+    if ($_SESSION["acces"] != "Oui") {
+        header("Location: index.php");
+    }
+}else{
     header("Location: index.php");
 }
 require ('./librairie/fonction.lib.php');
@@ -46,7 +50,7 @@ require ('./inclus/entete2.inc');
         <input type="text" class="form-control" name="description" id="description">
     </div>
     <div class="mb-3">
-        <input class="form-control" type="file" id="imageProduit" name="imageProduit">
+        <input class="form-control" type="file" id="imageProduit" name="imageProduit" accept="image/jpeg, image/jpg">
     </div>
     <div class="mt-4 mb-3">
         <input type="submit" value="Sauvegarder">

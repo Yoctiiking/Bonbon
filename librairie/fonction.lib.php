@@ -36,9 +36,6 @@ function VerifierUsager($bd, $courriel, $mdp)
     $requete = "SELECT * FROM usager WHERE courriel = '$courriel' AND motPasse = '$mdp'";
     $resultat = mysqli_query($bd, $requete);
     if (mysqli_num_rows($resultat) == 1) {
-        $_SESSION["acces"] = "Oui";
-        $_SESSION["courriel"] = $courriel;
-        header("Location: ajouterproduit.php");
         return true;
     } else {
         return false;

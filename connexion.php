@@ -1,15 +1,20 @@
 <?php session_start();
-require('./librairie/fonction.lib.php');
-require('./inclus/entete.inc'); 
+require ('librairie/fonction.lib.php');
 $bd;
 ConnecterBD($bd);
 
 $valide = true;
-if(isset($_GET["action"])){
-    if($_GET["action"] == "connecter"){
-       $valide = VerifierUsager($bd, $_POST["courriel"], $_POST["mdp"]);
+if (isset($_GET["action"])) {
+    if ($_GET["action"] == "connecter") {
+        $valide = VerifierUsager($bd, $_POST["courriel"], $_POST["mdp"]);
+        if ($valide) {
+            $_SESSION["acces"] = "Oui";
+            $_SESSION["courriel"] = $_POST["courriel"];
+            header("Location: ajouterproduit.php");
+        }
     }
 }
+require ('inclus/entete.inc');
 
 ?>
 
@@ -30,9 +35,9 @@ if(isset($_GET["action"])){
             <input type="reset" value="Annuler">
         </div>
     </div>
-    <?php if(!$valide){
-        print('<div class="text-center text-danger mt-4"> >> Le courriel ou le mot de passe est invalide << </div>');
+    <?php if (!$valide) {
+        print ('<div class="text-center text-danger mt-4"> >> Le courriel ou le mot de passe est invalide << </div>');
     } ?>
 </form>
 
-<?php require('./inclus/piedpage.inc'); ?>
+<?php require ('inclus/piedpage.inc'); ?>

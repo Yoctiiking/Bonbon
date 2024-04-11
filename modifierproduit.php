@@ -1,5 +1,9 @@
 <?php session_start();
-if($_SESSION["acces"] != "Oui"){
+if(isset($_SESSION["acces"])){
+    if ($_SESSION["acces"] != "Oui") {
+        header("Location: index.php");
+    }
+}else{
     header("Location: index.php");
 }
 require('./inclus/entete2.inc');
