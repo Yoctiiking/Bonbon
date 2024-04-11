@@ -1,4 +1,4 @@
-<?php require('./inclus/entete.inc'); ?>
+<?php require('inclus/entete.inc'); ?>
 
 <form action="" method="post">
     <div class="row">
@@ -36,4 +36,4 @@
     </div>-
 </form>
 
-<?php require('./inclus/piedpage.inc'); ?>
+<?php require('inclus/piedpage.inc'); ?>

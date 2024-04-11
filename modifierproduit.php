@@ -6,11 +6,11 @@ if(isset($_SESSION["acces"])){
 }else{
     header("Location: index.php");
 }
-require('./inclus/entete2.inc');
+require('inclus/entete2.inc');
 ?>
 <h2 class="text-center">Modifier un produit</h2>
 <div class="text-center">
 <<- EN CONSTRUCTION ->>
 </div>
 
-<?php require('./inclus/piedPage2.inc'); ?>
+<?php require('inclus/piedPage2.inc'); ?>

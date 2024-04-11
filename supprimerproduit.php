@@ -67,5 +67,5 @@ return valide;
 }
 </script>
 
-<?php require ('./inclus/piedPage2.inc'); ?>
+<?php require ('inclus/piedPage2.inc'); ?>
 

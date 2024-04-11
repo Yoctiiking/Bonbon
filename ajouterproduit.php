@@ -6,7 +6,7 @@ if(isset($_SESSION["acces"])){
 }else{
     header("Location: index.php");
 }
-require ('./librairie/fonction.lib.php');
+require ('librairie/fonction.lib.php');
 $bd;
 ConnecterBD($bd);
 if(isset($_GET["action"])){
@@ -14,7 +14,7 @@ if(isset($_GET["action"])){
         AjouterProduit($bd, $_POST["nomProduit"], $_POST["fournisseur"], $_POST["quantite"], $_POST["format"], $_POST["prixProduit"], $_POST["description"]);
     }
 }
-require ('./inclus/entete2.inc');
+require ('inclus/entete2.inc');
 ?>
 
 <h2 class="text-center">Ajouter un produit</h2>
@@ -58,5 +58,5 @@ require ('./inclus/entete2.inc');
     </div>
 </form>
 
-<?php require ('./inclus/piedPage2.inc'); ?>
+<?php require ('inclus/piedPage2.inc'); ?>
 

@@ -1,8 +1,8 @@
         <?php session_start();
           if(isset($_SESSION['courriel'])){
-          require('./inclus/entete2.inc');
+          require('inclus/entete2.inc');
         } else {
-          require('./inclus/entete.inc');
+          require('inclus/entete.inc');
         } 
         if(isset($_GET["action"])){
             if($_GET["action"] == "deconnecter"){
@@ -26,7 +26,7 @@
 
 
         <?php if(isset($_SESSION['courriel'])){
-          require('./inclus/piedPage2.inc');
+          require('inclus/piedPage2.inc');
         } else {
-          require('./inclus/piedPage.inc');
+          require('inclus/piedPage.inc');
         }?>

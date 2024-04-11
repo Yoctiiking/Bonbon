@@ -1,6 +1,6 @@
 <?php 
-    require('./librairie/fonction.lib.php');
-    require('./inclus/entete.inc'); 
+    require('librairie/fonction.lib.php');
+    require('inclus/entete.inc'); 
     
     $bd;
     ConnecterBD($bd);
@@ -9,4 +9,4 @@
 
 
 
-<?php require('./inclus/piedpage.inc'); ?>
+<?php require('inclus/piedpage.inc'); ?>
