@@ -53,6 +53,23 @@ function AjouterProduit($bd, $nomProduit, $fournisseur, $quantite, $format, $pri
     move_uploaded_file($fichier, "images/$number.jpg");
 }
 
+function afficherEnregistrement($bd)
+{
+    $requete = "select * from produit";
+    $resultat = mysqli_query($bd, $requete);
+
+    while ($ligne = mysqli_fetch_array($resultat)) {
+        print ('<tr>');
+        print ("<td><input type='checkbox' name='chk$ligne[idProduit]'></td>");
+        print ("<td>$ligne[nomProduit]</td>");
+        print ("<td>$ligne[fournisseur]</td>");
+        print ("<td class='text-center'>$ligne[quantite]</td>");
+        print ("<td>$ligne[prix]</td>");
+        print ("<td>$ligne[format]</td>");
+        print ("<td>$ligne[description]</td>");
+    }
+}
+
 function SupprimerProduit($bd)
 {
     $requete = "select * from produit";
@@ -63,7 +80,9 @@ function SupprimerProduit($bd)
             if ($_POST[$cocher]) {
                 $requete2 = "delete from produit where idProduit = $ligne[idProduit]";
                 $resultat2 = mysqli_query($bd, $requete2);
-                unlink("images/$ligne[idProduit].jpg");
+                if (file_exists("images/$ligne[idProduit].jpg")) {
+                    unlink("images/$ligne[idProduit].jpg");
+                }
             }
         }
     }

@@ -23,7 +23,7 @@ require ('inclus/entete2.inc');
     <div class="input-group mb-3">
         <span class="input-group-text bonbonBg text-light">Nom du produit :
         </span>
-        <input type="text" class="form-control" name="nomProduit" id="nomProduit" required>
+        <input type="text" class="form-control" name="nomProduit" id="nomProduit" maxlength="50" required>
     </div>
     <div class="input-group mb-3">
         <span class="input-group-text bonbonBg text-light">Prix :
@@ -33,7 +33,7 @@ require ('inclus/entete2.inc');
     <div class="input-group mb-3">
         <span class="input-group-text bonbonBg text-light">Fournisseur :
         </span>
-        <input type="text" class="form-control" name="fournisseur" id="fournisseur">
+        <input type="text" class="form-control" name="fournisseur" maxlength="50" id="fournisseur">
     </div>
     <div class="input-group mb-3">
         <span class="input-group-text bonbonBg text-light">Quantite :</span>
@@ -42,12 +42,12 @@ require ('inclus/entete2.inc');
     <div class="input-group mb-3">
         <span class="input-group-text bonbonBg text-light">Format :
         </span>
-        <input type="text" class="form-control" name="format" id="format">
+        <input type="text" class="form-control" name="format" id="format" maxlength="25">
     </div>
     <div class="input-group mb-3">
         <span class="input-group-text bonbonBg text-light">Description :
         </span>
-        <input type="text" class="form-control" name="description" id="description">
+        <input type="text" class="form-control" name="description" id="description" maxlength="100">
     </div>
     <div class="mb-3">
         <input class="form-control" type="file" id="imageProduit" name="imageProduit" accept="image/jpeg, image/jpg">
