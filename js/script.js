@@ -35,9 +35,28 @@ function AfficherDate() {
 }
 
 function ValiderSuppression() {
-  var valide = false;
-  if (confirm("Voulez-vous supprimer ce ou ces produits ?")) {
-    valide = true;
+  var cpt = 0,
+    valide = false;
+  var checked = document.querySelectorAll("input[type=checkbox]");
+  for (var i = 0; i < checked.length; i++) {
+    if (checked[i].checked == true) {
+      cpt++;
+    }
   }
+
+  if (cpt == 1) {
+    if (confirm("Voulez-vous supprimer ce produit ?")) {
+      valide = true;
+    }
+  } else if (cpt > 1) {
+    if (confirm(`Voulez-vous supprimer ces ${cpt} produits ?`)) {
+      valide = true;
+    }
+  }
+
   return valide;
+}
+
+function AnnulerModif() {
+  window.location.href = "modifierproduit.php";
 }

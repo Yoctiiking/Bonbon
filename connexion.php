@@ -40,4 +40,4 @@ require ('inclus/entete.inc');
     } ?>
 </form>
 
-<?php require ('inclus/piedpage.inc'); ?>
+<?php require ('inclus/piedPage.inc'); ?>

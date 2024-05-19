@@ -43,12 +43,12 @@
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                   <a
-                    class="nav-link active text-light"
+                    class="nav-link"
                     aria-current="page"
                     href="./produit.php"
                     >Nos Produits</a
                   >
-                  <a class="nav-link text-light" href="./rejoindre.php">Nous rejoindre</a>
+                  <a class="nav-link" href="./rejoindre.php">Nous rejoindre</a>
                 </div>
               </div>
             </div>

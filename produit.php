@@ -9,4 +9,4 @@
 
 
 
-<?php require('inclus/piedpage.inc'); ?>
+<?php require('inclus/piedPage.inc'); ?>

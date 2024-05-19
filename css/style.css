@@ -1,14 +1,44 @@
-.bonbonBg{
-    background-color: rgb(199, 0, 93);
-    color: white;
+.bonbonBg {
+  background-color: rgb(199, 0, 93);
+  color: white;
 }
 
-.bordure{
-    border: solid 3px black;
-    border-right: double;
+.bordure {
+  border: solid 3px black;
+  border-right: double;
 }
 
-.img-bd{
-    height: 200px; 
-    width: 250px;
+.navbar-nav a, a[href="connexion.php"], a[href="index.php?action=deconnecter"] {
+  color: white;
+  &:hover {
+    color: rgb(112, 3, 54);
+    text-decoration: underline;
+    font-size: 17px;
+  }
 }
+
+.img-bd {
+  height: 200px;
+  width: 250px;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  padding: 5px;
+  background-color: rgb(199, 0, 93);
+  color: white;
+  border: solid 2px rgb(199, 0, 93);
+  border-radius: 12%;
+
+  &:hover {
+    background-color: rgb(112, 3, 54);
+    border: solid 2px rgb(112, 3, 54);
+  }
+}
+
+/*
+@media (max-width: 768px) {
+
+  }
+ */

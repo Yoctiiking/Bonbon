@@ -43,13 +43,13 @@
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                   <a
-                    class="nav-link active text-light"
+                    class="nav-link"
                     aria-current="page"
                     href="./ajouterproduit.php"
                     >Ajouter Produit</a
                   >
-                  <a class="nav-link text-light" href="./modifierproduit.php">Modifier Produit</a>
-                  <a class="nav-link text-light" href="./supprimerproduit.php">Supprimer Produit</a>
+                  <a class="nav-link" href="./modifierproduit.php">Modifier Produit</a>
+                  <a class="nav-link" href="./supprimerproduit.php">Supprimer Produit</a>
                 </div>
               </div>
             </div>
